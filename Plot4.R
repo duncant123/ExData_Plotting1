@@ -35,7 +35,7 @@ plot(febpwr$Time, febpwr$Voltage, type="l" , ylab="Voltage",xlab="datetime")
 with(febpwr, plot(Time, Sub_metering_1,  type = "l" ,xlab="",ylab="Energy sub metering"))
 with(febpwr, points(Time, Sub_metering_2, col = "red", type ="l")) 
 with(febpwr, points(Time, Sub_metering_3, col = "blue", type = "l"))
-legend("topright",  col = c("black","blue", "red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1, box.lwd = 0)
+legend("topright",  col = c("black","red", "blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1, box.lwd = 0)
 
 # Plot 4-4
 plot(febpwr$Time, febpwr$Global_reactive_power, type="l" , xlab="datetime",ylab="Global_reactive_power")

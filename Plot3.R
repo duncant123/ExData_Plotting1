@@ -25,6 +25,6 @@ png( filename = "./Plot3.png", width = 480, height = 480)
 with(febpwr, plot(Time, Sub_metering_1,  type = "l" ,xlab="",ylab="Energy sub metering"))
 with(febpwr, points(Time, Sub_metering_2, col = "red", type ="l")) 
 with(febpwr, points(Time, Sub_metering_3, col = "blue", type = "l"))
-legend("topright",  col = c("black","blue", "red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1)
+legend("topright",  col = c("black","red", "blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1)
 
 dev.off()
