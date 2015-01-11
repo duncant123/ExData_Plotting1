@@ -20,7 +20,11 @@ power <- read.table(file = "./household_power_consumption.txt",sep=";",header = 
 febpwr <- filter(power, Date >= "2007-02-01" & Date <= "2007-02-02")
 febpwr$Time <- strptime(x = paste(febpwr$Date, febpwr$Time) ,format = "%Y-%m-%d %H:%M:%S")
 
-# Plot 1
-png( filename = "./Plot1.png", width = 480, height = 480)
-hist(febpwr$Global_active_power, col="red", main="Global Active Power", xlab ="Global Active Power (kilowatts)")
+# Plot 3
+png( filename = "./Plot3.png", width = 480, height = 480)
+with(febpwr, plot(Time, Sub_metering_1,  type = "l" ,xlab="",ylab="Energy sub metering"))
+with(febpwr, points(Time, Sub_metering_2, col = "red", type ="l")) 
+with(febpwr, points(Time, Sub_metering_3, col = "blue", type = "l"))
+legend("topright",  col = c("black","blue", "red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1)
+
 dev.off()
